@@ -1,0 +1,21 @@
+# docvert — engine manifest (install only what you need)
+
+# CORE
+bash          (4.0+)   required
+coreutils              required
+
+# IMAGES (image / to-pdf / from-pdf)
+imagemagick   required for image conversion   # provides `convert`
+
+# PDF OPS (merge / split / pdf-rm)
+ghostscript   required for pdf-merge          # provides `gs`
+poppler-utils optional — page counting for pdf-rm
+pdftk         optional — needed only for non-contiguous page sets (1,3,7 style)
+
+# DOCS (to-pdf extras)
+enscript      optional — reliable txt/md → pdf
+wkhtmltopdf   optional — html → pdf
+libreoffice   optional (BIG install) — docx/odt/pptx/xlsx → pdf
+
+# ONE-LINE for full power:
+# sudo apt install -y imagemagick ghostscript poppler-utils pdftk wkhtmltopdf enscript
